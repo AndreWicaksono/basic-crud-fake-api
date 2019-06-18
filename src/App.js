@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+// Module
+import React, { Component, Fragment } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// Pages
+import AppHome from './Pages/AppHome';
+import AppAbout from './Pages/AppAbout';
+import ViewPost from './Pages/Post/Content'
+
+// Style
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <Router>
+                <Fragment>
+                    <Route path="/" exact component={AppHome}/>
+                    <Route path="/post/:id" component={ViewPost}/>
+                    <Route path="/About" component={AppAbout}/>
+                </Fragment>
+            </Router>
+        )
+    }
 }
 
 export default App;

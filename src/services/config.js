@@ -1,0 +1,1 @@
+export const pathURL = 'http://localhost:3002';
