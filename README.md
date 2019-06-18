@@ -14,3 +14,8 @@ Module yang saya gunakan :
 
 Untuk menjalankan web pada development mode.<br>
 Buka [http://localhost:3000](http://localhost:3000) untuk menampilkan pada browser.
+
+
+### `json-server --watch db.json --port 3002`
+
+Untuk menjalankan JSON Fake RestAPI Server dengan port 3002 (sesuai konfigurasi).<br>
